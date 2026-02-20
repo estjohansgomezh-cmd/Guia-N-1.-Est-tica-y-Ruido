@@ -37,6 +37,8 @@ Los autores principales responsables del conjunto de datos son:
 El estudio contó con el apoyo de la Fundación Alemana de Investigación (DFG) y el Centro Interdisciplinario de Investigación Clínica de Jena.
 
 ## PARTE A
+### SIN FUCIONES
+
 La señal tomada de physionet corresponde a la número 0743.dat y 0743.hea (señales que se utilizaron durante todo el desarrollo de la guía).
 ### Programando desde cero:
 Al ser importada la señal se utilizaron los siguientes parámetros usando Spider como compilador de phython, gracias a su terminal:
@@ -72,6 +74,8 @@ A su vez este es el diagrama de flujo el cual representa el paso a paso de la pr
 
 <i>Diagrama de proceso 2</i></p>
 <img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
+
+### CON FUNCIONES
 
 ## PARTE B
 Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas y se capturó con la NI-DAQ (en el que se dejó el archivo para la captura).
