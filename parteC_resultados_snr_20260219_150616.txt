@@ -1,0 +1,41 @@
+============================================================
+  RESULTADOS PARTE C - ANÁLISIS DE RUIDO Y SNR
+============================================================
+
+Fecha y hora: 2026-02-19 15:06:23
+Duración de la señal: 10.0 s
+Frecuencia de muestreo: 1000 Hz
+
+------------------------------------------------------------
+1. RUIDO GAUSSIANO
+------------------------------------------------------------
+Descripción: Ruido blanco con distribución normal
+Sigma (σ): 0.019274
+SNR: 20.03 dB
+
+------------------------------------------------------------
+2. RUIDO DE IMPULSO
+------------------------------------------------------------
+Descripción: Picos esporádicos de alta amplitud
+Probabilidad: 2.0%
+Amplitud: 0.963696
+Número de impulsos: 200
+SNR: 3.01 dB
+
+------------------------------------------------------------
+3. RUIDO TIPO ARTEFACTO
+------------------------------------------------------------
+Descripción: Deriva de línea base + componente sinusoidal
+Frecuencia: 0.3 Hz
+Amplitud: 0.096370
+SNR: 8.57 dB
+
+============================================================
+CONCLUSIONES:
+============================================================
+• El tipo de ruido SÍ afecta el valor del SNR calculado.
+• Ruido gaussiano: afecta uniformemente toda la señal.
+• Ruido de impulso: afecta pocas muestras pero con gran intensidad.
+• Ruido artefacto: contamina principalmente las frecuencias bajas.
+
+Cada tipo de ruido requiere técnicas de filtrado específicas.
