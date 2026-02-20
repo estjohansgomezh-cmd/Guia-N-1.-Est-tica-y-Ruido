@@ -70,9 +70,6 @@ Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los va
 A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada:
 <img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> 
 
-<i>Diagrama de proceso 2</i></p>
-<img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
-
 ### Con Funciones predefinidas de python:
 
 En esta sección se realizó el análisis estadístico de la señal biomédica 0743 obtenida de PhysioNet, empleando funciones predefinidas de las librerías NumPy y SciPy, lo que permite optimizar el procesamiento y reducir significativamente la complejidad del código respecto a la implementación “desde cero”.
