@@ -161,6 +161,7 @@ Este ruido no es aleatorio, sino que tiene una causa específica (como el movimi
 <p><i>Histogramas de los tres tipos de ruidos</i></p>
 <img width="2085" height="1479" alt="parteC_zoom_detalle_20260219_150616" src="https://github.com/user-attachments/assets/bafb2532-6ea9-42de-9458-64bd0b78a500" />
 <p><i>Zoom</i></p>
+<img width="603" height="1748" alt="DIAGRAMA DE FLUJO - visual selection (2)" src="https://github.com/user-attachments/assets/fafd3e3b-cab0-4c23-bae2-14e9a11d2822" />
 
 Para cerrar esta parte se dejaron otros dos archivos txt, uno que representa la captura de datos y otro que representa los resultados del SNR.
 
