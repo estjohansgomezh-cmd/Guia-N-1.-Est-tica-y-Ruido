@@ -68,19 +68,12 @@ Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los va
 <p><i>Histogramas</i></p>
 
 A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada:
-<img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> <p><i>Diagrama de proceso</i></p>
-
-<p><i>Estadísticos descriptivos para la señal 0743</i></p>
-
-<img width="654" height="1234" alt="DIAGRAMA DE FLUJO - visual selection" src="https://github.com/user-attachments/assets/bcaaecbd-67cf-44b7-8e61-a2c57c271a59" />
+<img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> 
 
 <i>Diagrama de proceso 2</i></p>
 <img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
 
 ### Con Funciones predefinidas de python:
-Al ser importada la señal se utilizaron los siguientes parámetros usando Spider como compilador de phython, gracias a su terminal:
-
-<img width="528" height="411" alt="image" src="https://github.com/user-attachments/assets/247f5680-b2ae-4452-bb56-7b77b447c839" />
 
 En esta sección se realizó el análisis estadístico de la señal biomédica 0743 obtenida de PhysioNet, empleando funciones predefinidas de las librerías NumPy y SciPy, lo que permite optimizar el procesamiento y reducir significativamente la complejidad del código respecto a la implementación “desde cero”.
 
@@ -89,19 +82,22 @@ La señal completa contiene 933.820 muestras, equivalentes a 934 segundos de reg
 ### Procesamiento de la señal
 
 Inicialmente, el archivo 0743.dat fue leído mediante np.fromfile(), convirtiendo los valores digitales a unidades físicas:
-ECG → milivoltios (mV)
-NIBP → milímetros de mercurio (mmHg)
+-ECG → milivoltios (mV)
+-NIBP → milímetros de mercurio (mmHg)
 lo que permitió representar correctamente las señales en el dominio temporal.
 
 ### Cálculo de estadísticos descriptivos
 
+<img width="528" height="411" alt="image" src="https://github.com/user-attachments/assets/247f5680-b2ae-4452-bb56-7b77b447c839" />
+
 Para el cálculo de los parámetros estadísticos se utilizaron funciones optimizadas:
-Media → np.mean()
-Desviación estándar muestral → np.std(ddof=1)
-Varianza muestral → np.var(ddof=1)
-Asimetría → stats.skew()
-Curtosis (exceso de Fisher) → stats.kurtosis()
-Coeficiente de variación → calculado como (s/∣μ∣)×100
+-Media → np.mean()
+-Desviación estándar muestral → np.std(ddof=1)
+-Varianza muestral → np.var(ddof=1)
+-Asimetría → stats.skew()
+-Curtosis (exceso de Fisher) → stats.kurtosis()
+-Coeficiente de variación → calculado como (s/∣μ∣)×100
+
 El uso de ddof=1 garantiza que la desviación estándar y la varianza sean muestrales, equivalentes al método manual desarrollado en la parte anterior.
 
 ### Señales en el dominio del tiempo
@@ -111,15 +107,15 @@ El uso de ddof=1 garantiza que la desviación estándar y la varianza sean muest
 
 En la gráfica anterior se observa el comportamiento temporal de ambas señales durante los 10 segundos analizados.
 
-ECG
-La señal presenta picos pronunciados correspondientes a los complejos QRS del ciclo cardíaco.
-La media es cercana a cero, lo cual es característico de señales eléctricas cardíacas centradas alrededor de un valor promedio.
-Las líneas μ ± σ permiten visualizar la dispersión de los datos alrededor del promedio.
+#### ECG
+-La señal presenta picos pronunciados correspondientes a los complejos QRS del ciclo cardíaco.
+-La media es cercana a cero, lo cual es característico de señales eléctricas cardíacas centradas alrededor de un valor promedio.
+-Las líneas μ ± σ permiten visualizar la dispersión de los datos alrededor del promedio.
 
-NIBP
-La señal de presión arterial muestra una variación periódica asociada a cada latido cardíaco.
-Se evidencia una mayor amplitud y un comportamiento más suave en comparación con el ECG.
-La media representa la presión promedio en el intervalo analizado.
+#### NIBP
+-La señal de presión arterial muestra una variación periódica asociada a cada latido cardíaco.
+-Se evidencia una mayor amplitud y un comportamiento más suave en comparación con el ECG.
+-La media representa la presión promedio en el intervalo analizado.
 
 ### Histogramas y distribución de probabilidad
 
@@ -129,15 +125,14 @@ La media representa la presión promedio en el intervalo analizado.
 Los histogramas permiten analizar la distribución estadística de las amplitudes.
 
 #### ECG
-Presenta asimetría positiva elevada.
-
-La curtosis es alta, lo que indica presencia de valores extremos frecuentes.
-La señal no sigue una distribución normal debido a los picos pronunciados del complejo QRS.
+-Presenta asimetría positiva elevada.
+-La curtosis es alta, lo que indica presencia de valores extremos frecuentes.
+-La señal no sigue una distribución normal debido a los picos pronunciados del complejo QRS.
 
 #### NIBP
-La asimetría es cercana a cero.
-La curtosis es cercana a cero, indicando una forma más parecida a la distribución normal.
-La presión arterial presenta una distribución más equilibrada que el ECG.
+-La asimetría es cercana a cero.
+-La curtosis es cercana a cero, indicando una forma más parecida a la distribución normal.
+-La presión arterial presenta una distribución más equilibrada que el ECG.
 
 La curva normal teórica superpuesta permite comparar visualmente el grado de ajuste respecto a una distribución gaussiana.
 
@@ -147,27 +142,38 @@ La curva normal teórica superpuesta permite comparar visualmente el grado de aj
 
 Los diagramas de caja permiten observar:
 
-Mediana
-Cuartiles
-Rango intercuartílico
-Valores atípicos
+-Mediana
+-Cuartiles
+-Rango intercuartílico
+-Valores atípicos
 
 #### ECG
-Se observan numerosos valores atípicos correspondientes a los picos del latido cardíaco, lo cual explica su elevada curtosis.
+-Se observan numerosos valores atípicos correspondientes a los picos del latido cardíaco, lo cual explica su elevada curtosis.
 
 #### NIBP
-Presenta una dispersión más amplia en valores absolutos, pero con menor cantidad de outliers extremos en comparación con el ECG.
+-Presenta una dispersión más amplia en valores absolutos, pero con menor cantidad de outliers extremos en comparación con el ECG.
 
-### Comparación con el método “desde cero”
+<p><i>Diagrama de proceso</i></p>
+
+<p><i>Estadísticos descriptivos para la señal 0743</i></p>
+
+<img width="654" height="1234" alt="DIAGRAMA DE FLUJO - visual selection" src="https://github.com/user-attachments/assets/bcaaecbd-67cf-44b7-8e61-a2c57c271a59" />
+
+## Comparación con el método “desde cero”
 
 En comparación con la implementación manual utilizando bucles for, el uso de funciones predefinidas:
-Reduce significativamente la cantidad de código.
-Mejora la velocidad de ejecución.
-Disminuye la probabilidad de errores.
-Facilita la interpretación y validación de resultados.
-Utiliza algoritmos optimizados matemáticamente.
+-Reduce significativamente la cantidad de código.
+-Mejora la velocidad de ejecución.
+-Disminuye la probabilidad de errores.
+-Facilita la interpretación y validación de resultados.
+-Utiliza algoritmos optimizados matemáticamente.
 
 Ambos métodos producen resultados equivalentes; sin embargo, el uso de librerías especializadas representa una metodología más profesional y adecuada para aplicaciones reales en procesamiento digital de señales biomédicas.
+
+<i>Diagrama de proceso 2</i></p>
+<img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
+
+
 
 ## PARTE B
 Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas y se capturó con la NI-DAQ (en el que se dejó el archivo para la captura).
