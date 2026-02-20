@@ -126,7 +126,11 @@ Este ruido no es aleatorio, sino que tiene una causa específica (como el movimi
 <p><i>Zoom</i></p>
 
 Para cerrar esta parte se dejaron otros dos archivos txt, uno que representa la captura de datos y otro que representa los resultados del SNR.
-### Referencia:
+
+## Conclusión:
+Para concluir, la eficiencia de un sistema de procesamiento de señales se mide por su capacidad de mantener un SNR alto. La experimentación confirmó que la digitalización exitosa de una variable física depende directamente de la minimización de ruidos externos y de una frecuencia de muestreo adecuada, garantizando que el archivo final sea una representación fiel del fenómeno estudiado y no un producto del ruido electromagnético.
+
+## Referencia:
 
 * <a name="ref-schumann"></a> **Schumann, A., et al.** (Julio de 2021). *Envejecimiento autonómico:
  un conjunto de datos para cuantificar los cambios de la función autonómica cardiovascular durante el envejecimiento saludable*. PhysioNet. [https://doi.org/10.13026/2hsy-t491](https://doi.org/10.13026/2hsy-t491)
