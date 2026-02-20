@@ -86,14 +86,14 @@ En esta sección se realizó el análisis estadístico de la señal biomédica 0
 
 La señal completa contiene 933.820 muestras, equivalentes a 934 segundos de registro. Para efectos del análisis, se trabajó con una ventana de 10 segundos (10.000 muestras), considerando una frecuencia de muestreo de 1000 Hz.
 
-###Procesamiento de la señal
+### Procesamiento de la señal
 
 Inicialmente, el archivo 0743.dat fue leído mediante np.fromfile(), convirtiendo los valores digitales a unidades físicas:
 ECG → milivoltios (mV)
 NIBP → milímetros de mercurio (mmHg)
 lo que permitió representar correctamente las señales en el dominio temporal.
 
-###Cálculo de estadísticos descriptivos
+### Cálculo de estadísticos descriptivos
 
 Para el cálculo de los parámetros estadísticos se utilizaron funciones optimizadas:
 Media → np.mean()
@@ -104,9 +104,10 @@ Curtosis (exceso de Fisher) → stats.kurtosis()
 Coeficiente de variación → calculado como (s/∣μ∣)×100
 El uso de ddof=1 garantiza que la desviación estándar y la varianza sean muestrales, equivalentes al método manual desarrollado en la parte anterior.
 
-###Señales en el dominio del tiempo
+### Señales en el dominio del tiempo
 
 <img width="1947" height="891" alt="grafica1_senales_numpy" src="https://github.com/user-attachments/assets/dce89dd7-6a79-480a-b42e-1518f7c59aa0" />
+
 
 En la gráfica anterior se observa el comportamiento temporal de ambas señales durante los 10 segundos analizados.
 
@@ -120,23 +121,27 @@ La señal de presión arterial muestra una variación periódica asociada a cada
 Se evidencia una mayor amplitud y un comportamiento más suave en comparación con el ECG.
 La media representa la presión promedio en el intervalo analizado.
 
-###Histogramas y distribución de probabilidad
+### Histogramas y distribución de probabilidad
+
+<img width="1937" height="744" alt="grafica2_histogramas_numpy" src="https://github.com/user-attachments/assets/ac616ccb-6c5a-4ec4-a50d-71352b760391" />
+
 
 Los histogramas permiten analizar la distribución estadística de las amplitudes.
 
-ECG
+#### ECG
 Presenta asimetría positiva elevada.
+
 La curtosis es alta, lo que indica presencia de valores extremos frecuentes.
 La señal no sigue una distribución normal debido a los picos pronunciados del complejo QRS.
 
-NIBP
+#### NIBP
 La asimetría es cercana a cero.
 La curtosis es cercana a cero, indicando una forma más parecida a la distribución normal.
 La presión arterial presenta una distribución más equilibrada que el ECG.
 
 La curva normal teórica superpuesta permite comparar visualmente el grado de ajuste respecto a una distribución gaussiana.
 
-###Boxplots y análisis de dispersión
+### Boxplots y análisis de dispersión
 
 <img width="1337" height="742" alt="grafica3_boxplots" src="https://github.com/user-attachments/assets/4b9a93a2-423b-41a0-a71d-3a5528b9f4d8" />
 
@@ -147,13 +152,13 @@ Cuartiles
 Rango intercuartílico
 Valores atípicos
 
-ECG
+#### ECG
 Se observan numerosos valores atípicos correspondientes a los picos del latido cardíaco, lo cual explica su elevada curtosis.
 
-NIBP
+#### NIBP
 Presenta una dispersión más amplia en valores absolutos, pero con menor cantidad de outliers extremos en comparación con el ECG.
 
-###Comparación con el método “desde cero”
+### Comparación con el método “desde cero”
 
 En comparación con la implementación manual utilizando bucles for, el uso de funciones predefinidas:
 Reduce significativamente la cantidad de código.
