@@ -84,6 +84,7 @@ La señal completa contiene 933.820 muestras, equivalentes a 934 segundos de reg
 Inicialmente, el archivo 0743.dat fue leído mediante np.fromfile(), convirtiendo los valores digitales a unidades físicas:
 1. ECG → milivoltios (mV)
 2. NIBP → milímetros de mercurio (mmHg)
+   
 lo que permitió representar correctamente las señales en el dominio temporal.
 
 ### Cálculo de estadísticos descriptivos
