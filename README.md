@@ -69,10 +69,6 @@ Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los va
 
 A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada:
 <img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> <p><i>Diagrama de proceso</i></p>
-### Con Funciones predefinidas de python:
-Al ser importada la señal se utilizaron los siguientes parámetros usando Spider como compilador de phython, gracias a su terminal:
-
-<img width="528" height="411" alt="image" src="https://github.com/user-attachments/assets/247f5680-b2ae-4452-bb56-7b77b447c839" />
 
 <p><i>Estadísticos descriptivos para la señal 0743</i></p>
 
@@ -80,6 +76,11 @@ Al ser importada la señal se utilizaron los siguientes parámetros usando Spide
 
 <i>Diagrama de proceso 2</i></p>
 <img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
+
+### Con Funciones predefinidas de python:
+Al ser importada la señal se utilizaron los siguientes parámetros usando Spider como compilador de phython, gracias a su terminal:
+
+<img width="528" height="411" alt="image" src="https://github.com/user-attachments/assets/247f5680-b2ae-4452-bb56-7b77b447c839" />
 
 ## PARTE B
 Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas y se capturó con la NI-DAQ (en el que se dejó el archivo para la captura).
