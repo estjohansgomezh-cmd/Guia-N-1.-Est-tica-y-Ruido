@@ -1,5 +1,6 @@
 # Guia N°1: Estática y Ruido
-
+---
+## Descripción 
 En este repositorio se presenta el informe y los resultados de la Práctica de Laboratorio #1 de Estática y Ruido. Se trabajó con diferentes señales biomédicas, analizando su adquisición, comportamiento y presencia de ruido, así como su procesamiento y las conclusiones obtenidas del estudio experimental.
 
 ## Procedimiento
@@ -35,9 +36,50 @@ Los autores principales responsables del conjunto de datos son:
 
 El estudio contó con el apoyo de la Fundación Alemana de Investigación (DFG) y el Centro Interdisciplinario de Investigación Clínica de Jena.
 
+## PARTE A
+La señal tomada de physionet corresponde a la número 0743.dat y 0743.hea (señales que se utilizaron durante todo el desarrollo de la guía).
+### Programando desde cero:
+Al ser importada la señal se utilizaron los siguientes parámetros usando Spider como compilador de phython, gracias a su terminal:
+
+<img width="902" height="819" alt="Captura de pantalla 2026-02-19 190453" src="https://github.com/user-attachments/assets/e1c42f82-17e3-4042-9911-a50232cfceb0" />
+
+<p><i>Estadísticos descriptivos para la señal 0743</i></p>
+Esto con el fin de obtener dos tipos de gráficas una referente al ECG (Electrocardiograma) y la segunda respecto a NIBP (Non-Invasive Blood Pressure).
+
+El programa cargó una grabación de 934 segundos (15 minutos), pero para este ejercicio se creo una ventana de 10 segundos.
+- El ECG mide la actividad eléctrica del corazón en milivoltios ($mV$).
+- El NIBP mide la presión de la sangre en milímetros de mercurio ($mmHg$).
+
+El ECG tiene valores muy pequeños, lo que es normal debido a que la señal sube y baja constantemente por lo cual se empleó:
+1. Asimetría (4.10): Al ser un valor positivo alto, indica que hay picos muy marcados hacia arriba (las ondas R del latido).
+2. Curtosis (18.98): Este valor tan alto confirma que la señal tiene formas muy puntiagudas (el latido es un disparo eléctrico súbito).
+
+Por su parte los estadísticos de NIBP son más grandes y fáciles de interpretar en un contexto médico:
+1. Media (75.64 $mmHg$): Es la presión promedio durante esos 10 segundos.
+2. Desviación Estándar (19.97 $mmHg$): Indica cuánto varía la presión. Una variación de casi 20 unidades sugiere que la señal captura el cambio entre la presión máxima (sístole) y mínima (diástole).
+3. Curtosis (-0.25): Al ser un valor negativo y cercano a cero, significa que la presión es más plana comparada con los picos del corazón.
+
+<img width="1946" height="889" alt="grafica1_senales_cero" src="https://github.com/user-attachments/assets/62c655e2-df82-49b4-af87-7cc4943be424" />
+<p><i>Gráfica ECG y NIBP</i></p>
+Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los valores de las señales biomédicas que acabas de procesar.
+<img width="1935" height="742" alt="grafica2_histogramas_cero" src="https://github.com/user-attachments/assets/94a8b94d-c054-4c20-8a61-06dea50cf94b" />
+<p><i>Histogramas</i></p>
+
+A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada: 
+<img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" />
+<p><i>Diagrama de proceso</i></p>
+
+## PARTE B
+Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas
+
 ### Referencias
 
-* <a name="ref-schumann"></a> **Schumann, A., et al.** (Julio de 2021). *Envejecimiento autonómico: un conjunto de datos para cuantificar los cambios de la función autonómica cardiovascular durante el envejecimiento saludable*. PhysioNet. [https://doi.org/10.13026/2hsy-t491](https://doi.org/10.13026/2hsy-t491)
+* <a name="ref-schumann"></a> **Schumann, A., et al.** (Julio de 2021). *Envejecimiento autonómico:
+ un conjunto de datos para cuantificar los cambios de la función autonómica cardiovascular durante el envejecimiento saludable*. PhysioNet. [https://doi.org/10.13026/2hsy-t491](https://doi.org/10.13026/2hsy-t491)
+
+
+
+
 
 
 
