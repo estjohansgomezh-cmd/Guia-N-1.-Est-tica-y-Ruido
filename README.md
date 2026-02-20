@@ -39,7 +39,6 @@ El estudio contó con el apoyo de la Fundación Alemana de Investigación (DFG) 
 ## PARTE A
 La señal tomada de physionet corresponde a la número 0743.dat y 0743.hea (señales que se utilizaron durante todo el desarrollo de la guía).
 
-
 ### Programando desde cero:
 Al ser importada la señal se utilizaron los siguientes parámetros usando Spider como compilador de phython, gracias a su terminal:
 
@@ -168,7 +167,6 @@ En comparación con la implementación manual utilizando bucles for, el uso de f
 
 Ambos métodos producen resultados equivalentes; sin embargo, el uso de librerías especializadas representa una metodología más profesional y adecuada para aplicaciones reales en procesamiento digital de señales biomédicas.
 
-<i>Diagrama de proceso 2</i></p>
 <img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
 
 
@@ -187,7 +185,7 @@ Esta primera imagén es la representación directa de los voltajes que capturó 
 <img width="1937" height="744" alt="grafica_senal_capturada_20260219_112925" src="https://github.com/user-attachments/assets/39c7f13a-8a3d-4262-9d7d-78e2f9916af7" />
 <i>Gráfica señal capturada por la NI-DAQ</i></p>
 <img width="1202" height="734" alt="DIAGRAMA DE FLUJO - visual selection (1)" src="https://github.com/user-attachments/assets/5a34f1ea-2baf-4443-bab1-e16adbea9dff" />
-<i>Diagrama de proceso 3</i></p>
+
 
 El archivo txt. suministrado en archivos, contiene una lista de números decimales (flotantes). Cada número representa la amplitud de la señal en un instante de tiempo específico, es decir, el voltaje ($V$) que la tarjeta NI-DAQ midió en su entrada analógica.
 Asímismo valores como 0.00315, 0.00283, etc, lo que nos indica que la señal capturada tiene un nivel de ruido o una amplitud muy baja en ese fragmento, cercana a 0V.
@@ -228,7 +226,7 @@ Este ruido no es aleatorio, sino que tiene una causa específica (como el movimi
 <p><i>Zoom</i></p>
 <img width="603" height="1748" alt="DIAGRAMA DE FLUJO - visual selection (2)" src="https://github.com/user-attachments/assets/fafd3e3b-cab0-4c23-bae2-14e9a11d2822" />
 
-<i>Diagrama de proceso 4</i></p>
+
 Para cerrar esta parte se dejaron otros dos archivos txt, uno que representa la captura de datos y otro que representa los resultados del SNR.
 
 ## Conclusión:
