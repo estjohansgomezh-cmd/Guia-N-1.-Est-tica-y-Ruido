@@ -86,26 +86,25 @@ En esta sección se realizó el análisis estadístico de la señal biomédica 0
 
 La señal completa contiene 933.820 muestras, equivalentes a 934 segundos de registro. Para efectos del análisis, se trabajó con una ventana de 10 segundos (10.000 muestras), considerando una frecuencia de muestreo de 1000 Hz.
 
-🔎 1. Procesamiento de la señal
+###Procesamiento de la señal
 
 Inicialmente, el archivo 0743.dat fue leído mediante np.fromfile(), convirtiendo los valores digitales a unidades físicas:
 ECG → milivoltios (mV)
 NIBP → milímetros de mercurio (mmHg)
 lo que permitió representar correctamente las señales en el dominio temporal.
 
-2. Cálculo de estadísticos descriptivos
+###Cálculo de estadísticos descriptivos
 
 Para el cálculo de los parámetros estadísticos se utilizaron funciones optimizadas:
 Media → np.mean()
 Desviación estándar muestral → np.std(ddof=1)
 Varianza muestral → np.var(ddof=1)
 Asimetría → stats.skew()
-Curtosis (exceso de Fisher) → stats.kurtosis()<img width="1947" height="891" alt="grafica1_senales_numpy" src="https://github.com/user-attachments/assets/dce89dd7-6a79-480a-b42e-1518f7c59aa0" />
-
+Curtosis (exceso de Fisher) → stats.kurtosis()
 Coeficiente de variación → calculado como (s/∣μ∣)×100
 El uso de ddof=1 garantiza que la desviación estándar y la varianza sean muestrales, equivalentes al método manual desarrollado en la parte anterior.
 
-3. Señales en el dominio del tiempo
+###Señales en el dominio del tiempo
 
 <img width="1947" height="891" alt="grafica1_senales_numpy" src="https://github.com/user-attachments/assets/dce89dd7-6a79-480a-b42e-1518f7c59aa0" />
 
@@ -121,7 +120,7 @@ La señal de presión arterial muestra una variación periódica asociada a cada
 Se evidencia una mayor amplitud y un comportamiento más suave en comparación con el ECG.
 La media representa la presión promedio en el intervalo analizado.
 
-4. Histogramas y distribución de probabilidad
+###Histogramas y distribución de probabilidad
 
 Los histogramas permiten analizar la distribución estadística de las amplitudes.
 
@@ -137,9 +136,9 @@ La presión arterial presenta una distribución más equilibrada que el ECG.
 
 La curva normal teórica superpuesta permite comparar visualmente el grado de ajuste respecto a una distribución gaussiana.
 
-5. Boxplots y análisis de dispersión
+###Boxplots y análisis de dispersión
 
-
+<img width="1337" height="742" alt="grafica3_boxplots" src="https://github.com/user-attachments/assets/4b9a93a2-423b-41a0-a71d-3a5528b9f4d8" />
 
 Los diagramas de caja permiten observar:
 
@@ -154,7 +153,7 @@ Se observan numerosos valores atípicos correspondientes a los picos del latido 
 NIBP
 Presenta una dispersión más amplia en valores absolutos, pero con menor cantidad de outliers extremos en comparación con el ECG.
 
-Comparación con el método “desde cero”
+###Comparación con el método “desde cero”
 
 En comparación con la implementación manual utilizando bucles for, el uso de funciones predefinidas:
 Reduce significativamente la cantidad de código.
