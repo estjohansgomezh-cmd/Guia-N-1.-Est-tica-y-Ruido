@@ -67,9 +67,15 @@ Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los va
 
 A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada: 
 <img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> <p><i>Diagrama de proceso</i></p>
+### Funciones predefinidas de python:
+<img width="654" height="1234" alt="DIAGRAMA DE FLUJO - visual selection" src="https://github.com/user-attachments/assets/bcaaecbd-67cf-44b7-8e61-a2c57c271a59" />
+
+<i>Diagrama de proceso 2</i></p>
+<img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
 
 ## PARTE B
 Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas y se capturó con la NI-DAQ (en el que se dejó el archivo para la captura).
+
 
 Esta primera imagén es la representación directa de los voltajes que capturó la tarjeta DAQ.
 
@@ -84,11 +90,47 @@ Esta primera imagén es la representación directa de los voltajes que capturó 
 El archivo txt. suministrado en archivos, contiene una lista de números decimales (flotantes). Cada número representa la amplitud de la señal en un instante de tiempo específico, es decir, el voltaje ($V$) que la tarjeta NI-DAQ midió en su entrada analógica.
 Asímismo valores como 0.00315, 0.00283, etc, lo que nos indica que la señal capturada tiene un nivel de ruido o una amplitud muy baja en ese fragmento, cercana a 0V.
 
+Por ultimo comparando los resultados de la parte A con esta parte B podemos denotar un resultado clave y es la inestabilidad, esto ya que a diferencia de la Parte A, aquí la señal no es "perfecta". Hay pequeñas variaciones (picos) causadas por el hardware y el entorno.
 
-### Referencias
+
+## PARTE C
+Se utilizó esta vez la misma señal pero del punto B 
+Pero antes definamos ¿qué es la relación señal ruido (SNR)?
+Es la proporción entre la potencia de la señal que queremos medir y la potencia del ruido que la corrompe. Se mide en decibelios (dB).
+<img width="378" height="124" alt="Captura de pantalla 2026-02-19 215439" src="https://github.com/user-attachments/assets/b6505d7c-61d3-4994-99c8-46da61285fff" />
+
+a. Ruido Gaussiano:
+Es el ruido más común en electrónica. Se llama así porque su amplitud sigue una distribución de campana de Gauss.
+- Añade un "chisporroteo" constante y uniforme a toda la señal. La línea de la gráfica se vuelve más gruesa.
+- Medición del SNR: Como el ruido está en todas las frecuencias por igual, el SNR baja de forma constante. Es predecible y se puede reducir con filtros promedio.
+
+b. Ruido de Impulso:
+Son picos repentinos de gran amplitud y muy corta duración.
+- Son líneas verticales disparadas hacia arriba o hacia abajo en puntos aleatorios de la gráfica, pero el resto de la señal se mantiene limpia.
+- Medición del SNR: El SNR cae drásticamente solo en los instantes del pulso. Para medirlo correctamente, se suele usar la potencia promedio del ruido en toda la ventana de tiempo.
+
+c. Ruido tipo Artefacto:
+Este ruido no es aleatorio, sino que tiene una causa específica (como el movimiento de un sensor, la interferencia de 60Hz de un enchufe o un parpadeo en un ECG).
+- Crea deformaciones sistemáticas. Puede parecer una "joroba" en la señal o una ondulación lenta que no pertenece al dato original.
+- Medición del SNR: Es el más difícil de medir porque a veces se confunde con la señal misma. El SNR se calcula identificando la frecuencia del artefacto y comparando su energía contra la de la señal pura.
+
+<img width="877" height="940" alt="Captura de pantalla 2026-02-19 220203" src="https://github.com/user-attachments/assets/b6c8b631-69ea-4028-a31c-dfa009497138" />
+<p><i>Estadísticos descriptivos para la señal 0743</i></p>
+<img width="2085" height="1479" alt="parteC_comparacion_senales_20260219_150616" src="https://github.com/user-attachments/assets/a35de72e-23f1-4aa9-8455-c7a62917506e" />
+<p><i>Gráficas de las señales contaminadas</i></p>
+<img width="1184" height="734" alt="parteC_comparacion_snr_20260219_150616" src="https://github.com/user-attachments/assets/d642ce51-2ce5-48c1-bb2e-8fdd7a8d29a5" />
+<p><i>SNR según tipo de ruido</i></p>
+<img width="2084" height="595" alt="parteC_histogramas_ruido_20260219_150616" src="https://github.com/user-attachments/assets/b6c11a81-0881-4910-9deb-b5194edaff76" />
+<p><i>Histogramas de los tres tipos de ruidos</i></p>
+<img width="2085" height="1479" alt="parteC_zoom_detalle_20260219_150616" src="https://github.com/user-attachments/assets/bafb2532-6ea9-42de-9458-64bd0b78a500" />
+<p><i>Zoom</i></p>
+
+Para cerrar esta parte se dejaron otros dos archivos txt, uno que representa la captura de datos y otro que representa los resultados del SNR.
+### Referencia:
 
 * <a name="ref-schumann"></a> **Schumann, A., et al.** (Julio de 2021). *Envejecimiento autonómico:
  un conjunto de datos para cuantificar los cambios de la función autonómica cardiovascular durante el envejecimiento saludable*. PhysioNet. [https://doi.org/10.13026/2hsy-t491](https://doi.org/10.13026/2hsy-t491)
+
 
 
 
