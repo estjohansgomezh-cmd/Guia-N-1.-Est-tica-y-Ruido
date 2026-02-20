@@ -100,11 +100,14 @@ Media → np.mean()
 Desviación estándar muestral → np.std(ddof=1)
 Varianza muestral → np.var(ddof=1)
 Asimetría → stats.skew()
-Curtosis (exceso de Fisher) → stats.kurtosis()
+Curtosis (exceso de Fisher) → stats.kurtosis()<img width="1947" height="891" alt="grafica1_senales_numpy" src="https://github.com/user-attachments/assets/dce89dd7-6a79-480a-b42e-1518f7c59aa0" />
+
 Coeficiente de variación → calculado como (s/∣μ∣)×100
 El uso de ddof=1 garantiza que la desviación estándar y la varianza sean muestrales, equivalentes al método manual desarrollado en la parte anterior.
 
 3. Señales en el dominio del tiempo
+
+<img width="1947" height="891" alt="grafica1_senales_numpy" src="https://github.com/user-attachments/assets/dce89dd7-6a79-480a-b42e-1518f7c59aa0" />
 
 En la gráfica anterior se observa el comportamiento temporal de ambas señales durante los 10 segundos analizados.
 
