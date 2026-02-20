@@ -69,13 +69,20 @@ A su vez este es el diagrama de flujo el cual representa el paso a paso de la pr
 <img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> <p><i>Diagrama de proceso</i></p>
 
 ## PARTE B
-Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas y se capturó con la NI-DAQ (en el que se dejó el archivo para la captura), calculando estadísticos para esta parte:
+Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas y se capturó con la NI-DAQ (en el que se dejó el archivo para la captura).
+
+Esta primera imagén es la representación directa de los voltajes que capturó la tarjeta DAQ.
+
 <img width="737" height="889" alt="grafica_boxplot_capturado_20260219_112925" src="https://github.com/user-attachments/assets/b9f9edda-353a-4c7f-aef6-fbb95c9bc56c" />
+
 <i>Gráfica boxplot de la señal capturada por la NI-DAQ</i></p>
 <img width="1337" height="744" alt="grafica_histograma_capturado_20260219_112925" src="https://github.com/user-attachments/assets/7fa454ae-6eb8-497a-9ef7-8ccff02d86b6" />
 <i>Histograma 2</i></p>
 <img width="1937" height="744" alt="grafica_senal_capturada_20260219_112925" src="https://github.com/user-attachments/assets/39c7f13a-8a3d-4262-9d7d-78e2f9916af7" />
 <i>Gráfica señal capturada por la NI-DAQ</i></p>
+
+- El archivo txt. suministrado en archivos, contiene una lista de números decimales (flotantes). Cada número representa la amplitud de la señal en un instante de tiempo específico, es decir, el voltaje ($V$) que la tarjeta NI-DAQ midió en su entrada analógica.
+- Asímismo valores como 0.00315, 0.00283, etc, lo que nos indica que la señal capturada tiene un nivel de ruido o una amplitud muy baja en ese fragmento, cercana a 0V.
 
 ### Referencias
 
