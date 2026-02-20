@@ -67,7 +67,7 @@ Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los va
 <img width="1935" height="742" alt="grafica2_histogramas_cero" src="https://github.com/user-attachments/assets/94a8b94d-c054-4c20-8a61-06dea50cf94b" />
 <p><i>Histogramas</i></p>
 
-A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada: 
+A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada:
 <img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> <p><i>Diagrama de proceso</i></p>
 ### Con Funciones predefinidas de python:
 Al ser importada la señal se utilizaron los siguientes parámetros usando Spider como compilador de phython, gracias a su terminal:
