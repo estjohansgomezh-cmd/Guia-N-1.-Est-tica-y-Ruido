@@ -82,8 +82,8 @@ La señal completa contiene 933.820 muestras, equivalentes a 934 segundos de reg
 ### Procesamiento de la señal
 
 Inicialmente, el archivo 0743.dat fue leído mediante np.fromfile(), convirtiendo los valores digitales a unidades físicas:
--ECG → milivoltios (mV)
--NIBP → milímetros de mercurio (mmHg)
+1. ECG → milivoltios (mV)
+2. NIBP → milímetros de mercurio (mmHg)
 lo que permitió representar correctamente las señales en el dominio temporal.
 
 ### Cálculo de estadísticos descriptivos
@@ -91,12 +91,12 @@ lo que permitió representar correctamente las señales en el dominio temporal.
 <img width="528" height="411" alt="image" src="https://github.com/user-attachments/assets/247f5680-b2ae-4452-bb56-7b77b447c839" />
 
 Para el cálculo de los parámetros estadísticos se utilizaron funciones optimizadas:
--Media → np.mean()
--Desviación estándar muestral → np.std(ddof=1)
--Varianza muestral → np.var(ddof=1)
--Asimetría → stats.skew()
--Curtosis (exceso de Fisher) → stats.kurtosis()
--Coeficiente de variación → calculado como (s/∣μ∣)×100
+1. Media → np.mean()
+2. Desviación estándar muestral → np.std(ddof=1)
+3. Varianza muestral → np.var(ddof=1)
+4. Asimetría → stats.skew()
+5. Curtosis (exceso de Fisher) → stats.kurtosis()
+6. Coeficiente de variación → calculado como (s/∣μ∣)×100
 
 El uso de ddof=1 garantiza que la desviación estándar y la varianza sean muestrales, equivalentes al método manual desarrollado en la parte anterior.
 
@@ -108,14 +108,14 @@ El uso de ddof=1 garantiza que la desviación estándar y la varianza sean muest
 En la gráfica anterior se observa el comportamiento temporal de ambas señales durante los 10 segundos analizados.
 
 #### ECG
--La señal presenta picos pronunciados correspondientes a los complejos QRS del ciclo cardíaco.
--La media es cercana a cero, lo cual es característico de señales eléctricas cardíacas centradas alrededor de un valor promedio.
--Las líneas μ ± σ permiten visualizar la dispersión de los datos alrededor del promedio.
+1. La señal presenta picos pronunciados correspondientes a los complejos QRS del ciclo cardíaco.
+2. La media es cercana a cero, lo cual es característico de señales eléctricas cardíacas centradas alrededor de un valor promedio.
+3. Las líneas μ ± σ permiten visualizar la dispersión de los datos alrededor del promedio.
 
 #### NIBP
--La señal de presión arterial muestra una variación periódica asociada a cada latido cardíaco.
--Se evidencia una mayor amplitud y un comportamiento más suave en comparación con el ECG.
--La media representa la presión promedio en el intervalo analizado.
+1. La señal de presión arterial muestra una variación periódica asociada a cada latido cardíaco.
+2. Se evidencia una mayor amplitud y un comportamiento más suave en comparación con el ECG.
+3. La media representa la presión promedio en el intervalo analizado.
 
 ### Histogramas y distribución de probabilidad
 
@@ -125,14 +125,14 @@ En la gráfica anterior se observa el comportamiento temporal de ambas señales 
 Los histogramas permiten analizar la distribución estadística de las amplitudes.
 
 #### ECG
--Presenta asimetría positiva elevada.
--La curtosis es alta, lo que indica presencia de valores extremos frecuentes.
--La señal no sigue una distribución normal debido a los picos pronunciados del complejo QRS.
+1. Presenta asimetría positiva elevada.
+2. La curtosis es alta, lo que indica presencia de valores extremos frecuentes.
+3. La señal no sigue una distribución normal debido a los picos pronunciados del complejo QRS.
 
 #### NIBP
--La asimetría es cercana a cero.
--La curtosis es cercana a cero, indicando una forma más parecida a la distribución normal.
--La presión arterial presenta una distribución más equilibrada que el ECG.
+1. La asimetría es cercana a cero.
+2. La curtosis es cercana a cero, indicando una forma más parecida a la distribución normal.
+3. La presión arterial presenta una distribución más equilibrada que el ECG.
 
 La curva normal teórica superpuesta permite comparar visualmente el grado de ajuste respecto a una distribución gaussiana.
 
@@ -142,16 +142,16 @@ La curva normal teórica superpuesta permite comparar visualmente el grado de aj
 
 Los diagramas de caja permiten observar:
 
--Mediana
--Cuartiles
--Rango intercuartílico
--Valores atípicos
+1. Mediana
+2. Cuartiles
+3. Rango intercuartílico
+4. Valores atípicos
 
 #### ECG
--Se observan numerosos valores atípicos correspondientes a los picos del latido cardíaco, lo cual explica su elevada curtosis.
+Se observan numerosos valores atípicos correspondientes a los picos del latido cardíaco, lo cual explica su elevada curtosis.
 
 #### NIBP
--Presenta una dispersión más amplia en valores absolutos, pero con menor cantidad de outliers extremos en comparación con el ECG.
+Presenta una dispersión más amplia en valores absolutos, pero con menor cantidad de outliers extremos en comparación con el ECG.
 
 <p><i>Diagrama de proceso</i></p>
 
@@ -162,11 +162,11 @@ Los diagramas de caja permiten observar:
 ## Comparación con el método “desde cero”
 
 En comparación con la implementación manual utilizando bucles for, el uso de funciones predefinidas:
--Reduce significativamente la cantidad de código.
--Mejora la velocidad de ejecución.
--Disminuye la probabilidad de errores.
--Facilita la interpretación y validación de resultados.
--Utiliza algoritmos optimizados matemáticamente.
+1. Reduce significativamente la cantidad de código.
+2. Mejora la velocidad de ejecución.
+3. Disminuye la probabilidad de errores.
+4. Facilita la interpretación y validación de resultados.
+5. Utiliza algoritmos optimizados matemáticamente.
 
 Ambos métodos producen resultados equivalentes; sin embargo, el uso de librerías especializadas representa una metodología más profesional y adecuada para aplicaciones reales en procesamiento digital de señales biomédicas.
 
