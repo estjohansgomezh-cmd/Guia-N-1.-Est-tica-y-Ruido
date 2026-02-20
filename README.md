@@ -69,46 +69,17 @@ Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los va
 
 A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada: 
 <img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> <p><i>Diagrama de proceso</i></p>
-### Funciones predefinidas de python:
-<img width="654" height="1234" alt="DIAGRAMA DE FLUJO - visual selection" src="https://github.com/user-attachments/assets/bcaaecbd-67cf-44b7-8e61-a2c57c271a59" />
-
-<i>Diagrama de proceso 2</i></p>
-<img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
-
-### CON FUNCIONES
+### Con Funciones predefinidas de python:
 Al ser importada la señal se utilizaron los siguientes parámetros usando Spider como compilador de phython, gracias a su terminal:
 
 <img width="528" height="411" alt="image" src="https://github.com/user-attachments/assets/247f5680-b2ae-4452-bb56-7b77b447c839" />
 
 <p><i>Estadísticos descriptivos para la señal 0743</i></p>
-Esto con el fin de obtener dos tipos de gráficas una referente al ECG (Electrocardiograma) y la segunda respecto a NIBP (Non-Invasive Blood Pressure).
 
-El programa cargó una grabación de 934 segundos (15 minutos), pero para este ejercicio se creo una ventana de 10 segundos.
-- El ECG mide la actividad eléctrica del corazón en milivoltios ($mV$).
-- El NIBP mide la presión de la sangre en milímetros de mercurio ($mmHg$).
-- 
-1. Asimetría (4.10): Al ser un valor positivo alto, indica que hay picos muy marcados hacia arriba (las ondas R del latido).
-2. Curtosis (18.98): Este valor tan alto confirma que la señal tiene formas muy puntiagudas (el latido es un disparo eléctrico súbito).
-
-Por su parte los estadísticos de NIBP son más grandes y fáciles de interpretar en un contexto médico:
-1. Media (75.64 $mmHg$): Es la presión promedio durante esos 10 segundos.
-2. Desviación Estándar (19.97 $mmHg$): Indica cuánto varía la presión. Una variación de casi 20 unidades sugiere que la señal captura el cambio entre la presión máxima (sístole) y mínima (diástole).
-3. Curtosis (-0.25): Al ser un valor negativo y cercano a cero, significa que la presión es más plana comparada con los picos del corazón.
-
-<img width="1946" height="889" alt="grafica1_senales_cero" src="https://github.com/user-attachments/assets/62c655e2-df82-49b4-af87-7cc4943be424" />
-<p><i>Gráfica ECG y NIBP</i></p>
-Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los valores de las señales biomédicas que acabas de procesar.
-<img width="1935" height="742" alt="grafica2_histogramas_cero" src="https://github.com/user-attachments/assets/94a8b94d-c054-4c20-8a61-06dea50cf94b" />
-<p><i>Histogramas</i></p>
-
-A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada: 
-<img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> <p><i>Diagrama de proceso</i></p>
-### Funciones predefinidas de python:
 <img width="654" height="1234" alt="DIAGRAMA DE FLUJO - visual selection" src="https://github.com/user-attachments/assets/bcaaecbd-67cf-44b7-8e61-a2c57c271a59" />
 
 <i>Diagrama de proceso 2</i></p>
 <img width="619" height="292" alt="Cuadro comparativo - visual selection" src="https://github.com/user-attachments/assets/8b75fcc9-933a-4c7c-81c4-614c6d98f7f5" />
-
 
 ## PARTE B
 Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas y se capturó con la NI-DAQ (en el que se dejó el archivo para la captura).
@@ -123,6 +94,8 @@ Esta primera imagén es la representación directa de los voltajes que capturó 
 <i>Histograma 2</i></p>
 <img width="1937" height="744" alt="grafica_senal_capturada_20260219_112925" src="https://github.com/user-attachments/assets/39c7f13a-8a3d-4262-9d7d-78e2f9916af7" />
 <i>Gráfica señal capturada por la NI-DAQ</i></p>
+<img width="1202" height="734" alt="DIAGRAMA DE FLUJO - visual selection (1)" src="https://github.com/user-attachments/assets/5a34f1ea-2baf-4443-bab1-e16adbea9dff" />
+<i>Diagrama de proceso 3</i></p>
 
 El archivo txt. suministrado en archivos, contiene una lista de números decimales (flotantes). Cada número representa la amplitud de la señal en un instante de tiempo específico, es decir, el voltaje ($V$) que la tarjeta NI-DAQ midió en su entrada analógica.
 Asímismo valores como 0.00315, 0.00283, etc, lo que nos indica que la señal capturada tiene un nivel de ruido o una amplitud muy baja en ese fragmento, cercana a 0V.
@@ -163,6 +136,7 @@ Este ruido no es aleatorio, sino que tiene una causa específica (como el movimi
 <p><i>Zoom</i></p>
 <img width="603" height="1748" alt="DIAGRAMA DE FLUJO - visual selection (2)" src="https://github.com/user-attachments/assets/fafd3e3b-cab0-4c23-bae2-14e9a11d2822" />
 
+<i>Diagrama de proceso 4</i></p>
 Para cerrar esta parte se dejaron otros dos archivos txt, uno que representa la captura de datos y otro que representa los resultados del SNR.
 
 ## Conclusión:
