@@ -66,16 +66,22 @@ Finalmente se obtuvo el histograma con el fin de ver cómo se distribuyen los va
 <p><i>Histogramas</i></p>
 
 A su vez este es el diagrama de flujo el cual representa el paso a paso de la programación usada: 
-<img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" />
-<p><i>Diagrama de proceso</i></p>
+<img width="1344" height="963" alt="Diagrama de Flujo_ - visual selection (1)" src="https://github.com/user-attachments/assets/e7a742b2-1db2-4f4a-9c75-e651ffc63bdf" /> <p><i>Diagrama de proceso</i></p>
 
 ## PARTE B
-Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas
+Se generó una señal fisiológica del mismo tipo de la usada en la parte A utilizando el generador de señales biológicas y se capturó con la NI-DAQ (en el que se dejó el archivo para la captura), calculando estadísticos para esta parte:
+<img width="737" height="889" alt="grafica_boxplot_capturado_20260219_112925" src="https://github.com/user-attachments/assets/b9f9edda-353a-4c7f-aef6-fbb95c9bc56c" />
+<i>Gráfica boxplot de la señal capturada por la NI-DAQ</i></p>
+<img width="1337" height="744" alt="grafica_histograma_capturado_20260219_112925" src="https://github.com/user-attachments/assets/7fa454ae-6eb8-497a-9ef7-8ccff02d86b6" />
+<i>Histograma 2</i></p>
+<img width="1937" height="744" alt="grafica_senal_capturada_20260219_112925" src="https://github.com/user-attachments/assets/39c7f13a-8a3d-4262-9d7d-78e2f9916af7" />
+<i>Gráfica señal capturada por la NI-DAQ</i></p>
 
 ### Referencias
 
 * <a name="ref-schumann"></a> **Schumann, A., et al.** (Julio de 2021). *Envejecimiento autonómico:
  un conjunto de datos para cuantificar los cambios de la función autonómica cardiovascular durante el envejecimiento saludable*. PhysioNet. [https://doi.org/10.13026/2hsy-t491](https://doi.org/10.13026/2hsy-t491)
+
 
 
 
