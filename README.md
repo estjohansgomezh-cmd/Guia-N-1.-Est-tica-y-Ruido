@@ -223,6 +223,20 @@ Para cerrar esta parte se dejaron otros dos archivos txt, uno que representa la 
 ## Conclusión:
 Para concluir, la eficiencia de un sistema de procesamiento de señales se mide por su capacidad de mantener un SNR alto. La experimentación confirmó que la digitalización exitosa de una variable física depende directamente de la minimización de ruidos externos y de una frecuencia de muestreo adecuada, garantizando que el archivo final sea una representación fiel del fenómeno estudiado y no un producto del ruido electromagnético.
 
+## Preguntas de discución:
+- ¿Los valores estadísticos calculados sobre la señal sintética son exactamente iguales a los obtenidos a partir de la señal real? ¿Por qué?
+  No, no son exactamente iguales.
+
+  - Razón: Las señales reales contienen variaciones naturales, artefactos biológicos (en el caso de señales biomédicas) e interferencias del entorno que son impredecibles y complejas.
+  - Naturaleza de la señal sintética: Una señal sintética es una representación idealizada generada mediante funciones matemáticas (como una onda senoidal). Aunque se le añada ruido controlado, sigue siendo un modelo simplificado.
+  Diferencias estadísticas: Los estadísticos como la media, la desviación estándar y el valor RMS en una señal real reflejan una variabilidad que no está presente de la misma forma en la señal sintética, la cual es determinista y solo varía según los parámetros que nosotros definamos.
+- ¿Afecta el tipo de ruido el valor de la SNR calculado? ¿Cuáles podrían ser las razones?
+  Sí, el tipo de ruido afecta significativamente el cálculo de la relación señal-ruido (SNR).
+  - Las razones principales son:
+  - Distribución de la potencia: Diferentes tipos de ruido tienen distintos perfiles de potencia. Por ejemplo, el ruido blanco tiene una densidad espectral de potencia constante en todas las frecuencias, mientras que el ruido rosa o el ruido de impulso concentran su energía de forma diferente.
+  - Amplitud y varianza: La SNR se basa en la relación entre la potencia de la señal y la potencia del ruido. Si el ruido introducido (como el ruido Gaussiano) tiene una varianza mayor, la SNR disminuirá drásticamente.
+  - Solapamiento de frecuencias: Si el ruido introducido tiene componentes de frecuencia que coinciden con las frecuencias principales de la señal original, la distinción entre "señal" y "ruido" se vuelve más difícil, afectando la precisión de la potencia estimada para el cálculo de la SNR.
+  - Picos de interferencia: Ruidos de tipo "artefacto" (picos aislados) pueden elevar el valor RMS del ruido de manera desproporcionada en comparación con un ruido térmico constante, alterando el resultado final de la fórmula.
 ## Referencia:
 
 * <a name="ref-schumann"></a> **Schumann, A., et al.** (Julio de 2021). *Envejecimiento autonómico:
